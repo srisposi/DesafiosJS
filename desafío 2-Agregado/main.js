@@ -4,7 +4,9 @@ let apellido = prompt ('Ingrese su Apellido');
 
 
 let rolUsuario = prompt ('Ingrese si usted es Estudiante o Trabajador'); 
-let fechaActual =  new Date(); 
+while(rolUsuario === "Estudiante" || rolUsuario === "Trabajador")
+{
+    let fechaActual =  new Date(); 
 let fechaNacimiento = new Date(prompt('Ingrese la fecha de su nacimiento en el siguiente formato: MM/DD/YYYY'));
 let edad = fechaActual.getTime() - fechaNacimiento.getTime();
 alert(edad.toString());
@@ -45,4 +47,6 @@ if ((status == "mayor") && (rolUsuario == "Trabajador")){
 alert("Se registro con Éxito");
 console.log("Se registro el usuario " + nombre + " " + apellido + " " + "cuya edad es de " + edad);
 alert("Se registro el usuario " + nombre + " " + apellido + " " + "cuya edad es de " + edad);
-alert("Tiene el rol de " + rolUsuario + " y su situación es la de " + status); 
+alert("Tiene el rol de " + rolUsuario + " y su situación es la de " + status);
+}
+ 
