@@ -1,8 +1,14 @@
 //Se reciben los Datos del usuario por prompt.
 let nombre = prompt ('Ingrese su Nombre')
 let apellido = prompt ('Ingrese su Apellido');
-let rolUsuario = prompt ('Ingrese si usted es Estudiante o Trabajador');
-let edad = prompt ('Ingrese su edad');
+
+
+let rolUsuario = prompt ('Ingrese si usted es Estudiante o Trabajador'); 
+let fechaActual =  new Date(); 
+let fechaNacimiento = new Date(prompt('Ingrese la fecha de su nacimiento en el siguiente formato: MM/DD/YYYY'));
+let edad = fechaActual.getTime() - fechaNacimiento.getTime();
+alert(edad.toString());
+//let edad = prompt ('Ingrese su edad');
 let status;
 
 //Se verifica el rol del usuario
