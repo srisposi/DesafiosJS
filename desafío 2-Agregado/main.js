@@ -1,5 +1,5 @@
 //Se reciben los Datos del usuario por prompt.
-let nombre = prompt ('Ingrese su Nombre')
+/* let nombre = prompt ('Ingrese su Nombre')
 let apellido = prompt ('Ingrese su Apellido');
 
 
@@ -48,5 +48,29 @@ alert("Se registro con Éxito");
 console.log("Se registro el usuario " + nombre + " " + apellido + " " + "cuya edad es de " + edad);
 alert("Se registro el usuario " + nombre + " " + apellido + " " + "cuya edad es de " + edad);
 alert("Tiene el rol de " + rolUsuario + " y su situación es la de " + status);
-}
+} */
  
+// Código II
+// Declaración de variables y asignación de valores
+let nombre = prompt("Ingrese su nombre: ");
+let apellido = prompt("Ingrese su apellido: ");
+let respuesta= prompt("Buenos días " + nombre + ". Ha tenido contacto con un paciente COVID en los últimos 15 días? (Si/No)");
+let debeAislarse = "debe aislarse.";
+let noDebeAislarse = "no debe aislarse.";
+// Control de flujo: ciclo WHILE y condicionales (if - else) + función toUpperCase()
+while ((respuesta.toUpperCase() != "SI") || (respuesta.toUpperCase() != "NO")) {        
+    if((respuesta.toUpperCase() === "SI") || (respuesta.toUpperCase() === "NO")){
+        break;
+    }
+    else {
+       respuesta =prompt("Debe ingresar Si o No"); 
+    }
+} 
+if(respuesta.toUpperCase() == "SI"){
+    respuesta = debeAislarse;
+    alert("Usted " + respuesta)
+}
+else{
+    respuesta = noDebeAislarse;
+    alert("Usted " + respuesta)
+}
