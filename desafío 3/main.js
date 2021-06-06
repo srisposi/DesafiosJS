@@ -1,6 +1,5 @@
 //Switch case para hacer un menú dónde seleccione las promociones
 let promocion = prompt("Seleccione la promocion que desee: ")
-let descuentoVehiculo = 0;
 if (promocion > 5 || promocion < 1) {
     alert("Debe ingresar un número entre 1 y 5 ")
 }
@@ -22,15 +21,15 @@ alert (compra);
 
 //Control de flujo con while - if para finalizar la compra
 let estadoCompra = prompt("¿Finalizó su compra?");
-while ((respuesta.toUpperCase() != "SI") || (respuesta.toUpperCase() != "NO")) {        
-    if((respuesta.toUpperCase() === "SI") || (respuesta.toUpperCase() === "NO")){
+while ((estadoCompra.toUpperCase() != "SI") || (estadoCompra.toUpperCase() != "NO")) {        
+    if((estadoCompra.toUpperCase() === "SI") || (estadoCompra.toUpperCase() === "NO")){
         break;
     }
     else {
-        respuesta =prompt("Debe ingresar Si o No"); 
+        estadoCompra =prompt("Debe ingresar Si o No"); 
     }
 }
-if(respuesta.toUpperCase() == "SI"){
+if(estadoCompra.toUpperCase() == "SI"){
     alert("Usted debe pagar: " + compra)
 }
 else{
@@ -42,16 +41,16 @@ else{
 function CalculoPromociones(promocion)
 {
     switch (promocion) {
-        case 1:
+        case '1':
             descuento = 0.2;
         break;
-        case 2:
+        case '2':
             descuento = 0.3;
         break;
-        case 3:
+        case '3':
             descuento = 0.4;
         break;
-        case 4:
+        case '4':
             descuento = 0.5; 
         break; 
         default:
@@ -62,16 +61,16 @@ function CalculoPromociones(promocion)
 
 function CalculoCosto(TipoVehiculo){
     switch(TipoVehiculo){
-        case Moto:
+        case 'Moto':
             costo = 400;
         break;
-        case Auto:
+        case 'Auto':
             costo = 500;
         break;
-        case autoVan:
+        case 'autoVan':
             costo = 600;
         break;      
-        case pickUp:
+        case 'pickUp':
             costo = 700;
         break;
         default:
