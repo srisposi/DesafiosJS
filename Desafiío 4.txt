@@ -1,0 +1,9 @@
+Primer Link: https://github.com/srisposi/DesafiosJS/tree/main/desaf%C3%ADo%204
+
+Deafío realizado con el simulador de pagos, modificando el manejo de los tipos de vehículos con un array
+
+Segundo Link: https://github.com/srisposi/DesafiosJS/tree/main/desaf%C3%ADo%204%20-%20parte%20II
+
+Desafío realizado con el simulador de pagos, creando un objeto de tipo Vehículos para manejar 
+con sus propiedades, lo que se venía haciendo con funciones. Incluyendo también un array
+para manejar los diferentes autos estacionados.

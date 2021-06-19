@@ -15,9 +15,9 @@ const Vehiculos_5 = new Vehiculos ('PickUp','222-113','ff-7', 500, 0.2);
 
 const ArrayVehiculos = [Vehiculos_1,Vehiculos_2,Vehiculos_3,Vehiculos_4,Vehiculos_5]
 
-//Switch case para hacer un menú dónde seleccione el tipo de vehículo que posee
+//Menú para que el usuario seleccione su vehículo
 let VehiculoSeleccionado = prompt("Seleccione su vehículo: ")
-//HAcer algún tipo de validación.
+//Se realiza el cobro del vehículo estacionado
 let costo = 0
 for(let i = 0; i < ArrayVehiculos.length; i++){
     if (VehiculoSeleccionado = i+1){
