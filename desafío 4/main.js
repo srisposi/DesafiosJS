@@ -10,8 +10,24 @@ else{
 }
 
 //Switch case para hacer un menú dónde seleccione el tipo de vehículo que posee
-let TiposVehiculo = prompt("Seleccione su tipo de vehículo: ")
+// Trabajamps el menú que selecciona el tipo de vehículo mediante un array
+let ArrayVehiculo = ['Moto','Auto','AutoVan','PickUp'];
 //HAcer algún tipo de validación.
+/* let Bandera = prompt("Indica el tipo de vehículo que posee"); */
+let EstadoVehiculo = prompt("Posee otro vehículo que no se encuentre en la lista?");
+let NuevoVehiculo;
+let TiposVehiculo;
+while ((EstadoVehiculo.toUpperCase() == "SI")) {        
+    NuevoVehiculo = prompt("Ingrese el vehículo")
+    ArrayVehiculo.push(NuevoVehiculo);
+    break;
+}
+for(let i = 0; i < ArrayVehiculo.length; i++){
+    TiposVehiculo = ArrayVehiculo[i];
+}
+TiposVehiculo = prompt("Seleccione su vehículo");
+
+
 CalculoCosto(TiposVehiculo);
 let compra = costo * descuentoVehiculo;
 alert (compra);
