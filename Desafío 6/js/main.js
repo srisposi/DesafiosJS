@@ -75,8 +75,9 @@ const renderVehiculos = vehiculos =>{
 const addTocart = evento =>{
     console.log('El id del producto es: ', evento.target.value);
     const idVehiculos = evento.target.value;
+    console.log(typeof idVehiculos)
 
-    const buscarVehiculos = vehiculos.find(elemento => elemento.id === idVehiculos);
+    const buscarVehiculos = vehiculos.find(elemento => elemento.id === parseInt(idVehiculos));
     console.log('Este es el vehiculo elegido: ', buscarVehiculos);
 
     console.log('Antes de guardar: ', carrito);
@@ -97,14 +98,14 @@ const renderCart = arrayCart => {
     console.log('Hay vehículos');
     cartSection.innerHTML = '';
     let html = '';
-
-    arrayCart.forEach(vehiculos => {
-        //console.log(vehiculos);
+    console.log(arrayCart)
+    arrayCart.forEach(vehiculo => {
+        console.log(vehiculo);
         html += `
         <section class="cartSection">
-            <h2>${vehiculos.title}</h2>
+            <h2>${vehiculo.title}</h2>
             
-            <button class="btn-delete" onclick="deleteFromCart('${vehiculos.id}')">X</button>
+            <button class="btn-delete" onclick="deleteFromCart('${vehiculo.id}')">X</button>
         </section>    
         `;
     });
@@ -116,7 +117,7 @@ const renderCart = arrayCart => {
 const deleteFromCart = id => {
     console.log(id)
     console.log('Carrito antes de eliminar evehículo: ', carrito)
-    const buscarVehiculoBorrar = carrito.filter(vehiculos => vehiculos.id !== id);
+    const buscarVehiculoBorrar = carrito.filter(vehiculos => vehiculos.id !== parseInt(id));
     console.log('Carrito sin el vehiculo eliminado: ', buscarVehiculoBorrar);
     //Se modifica el carrito original con el nuevo array;
     carrito = buscarVehiculoBorrar;
