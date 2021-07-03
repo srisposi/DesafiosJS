@@ -1,0 +1,132 @@
+HTML:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Mi tienda</h1>
+    <section class="products">
+    </section>
+    <hr>
+    <hr>
+    <h2>Mi carrito</h2>
+    <section class="cart">
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+20:23
+JS:
+//Esto esta simulando mi base de datos
+const products = [
+    {
+      id: '1ghgfh',
+      nombre: 'producto 1',
+      precio: 5000
+    },
+    {
+      id: '2ghfjdhgjhg',
+      nombre: 'producto 2',
+      precio: 6000
+    },
+    {
+      id: '3gfjhfghjhtg',
+      nombre: 'producto 3',
+      precio: 7000
+    },
+    {
+      id: '4yjtiytiftuk',
+      nombre: 'producto 4',
+      precio: 8000
+    },
+    {
+      id: '5ytjtyjku',
+      nombre: 'producto 5',
+      precio: 3000
+    }
+  ];
+//array donde almacenamos los productos que vamos seleccionando
+let carrito = [];
+//el parametro que se le pasa es o debe ser un array
+const renderProducts = firulais => {
+    const productsSection = document.querySelector('.products');
+    //Si el parametro está vacio o es undefined
+    if(!firulais || firulais.length === 0) {
+        productsSection.innerHTML = '<p>No hay productos :(</p>'
+        return;
+    }
+    productsSection.innerHTML = '';
+    let html = '';
+    firulais.forEach(product => {
+        html += `
+        <article class="articulo">
+            <h2>${product.nombre}</h2>
+            <p>${product.precio}</p>
+            <button class="btn-comprar" value=${product.id}>comprar</button>
+        </article>
+        `;
+    });
+    productsSection.innerHTML = html;
+}
+const addToCart = evento => {
+    console.log('El id del producto capturado con el boton: ',evento.target.value);
+    const idDelProductoABuscar = evento.target.value;
+    const buscarProductoEnDB = products.find(elemento => elemento.id === idDelProductoABuscar);
+    console.log('Este es el producto que estas buscando: ', buscarProductoEnDB);
+    console.log('Antes de guardar en el carrito: ', carrito);
+    carrito.push(buscarProductoEnDB);
+    console.log('Despues de guardar en el carrito: ', carrito);
+    //Aqui termina la logica para agregar al ARRAY del carrito
+    //////////////////////////////////////////////////////////////////
+    //Aqui empieza la logica para mostrar en el HTML
+    renderCart(carrito);
+}
+const renderCart = array => {
+    const cartSection = document.querySelector('.cart');
+    //Si el parametro está vacio o es undefined
+    if(!array || array.length === 0) {
+        cartSection.innerHTML = '<p>No has comprado nada! :(</p>'
+        return;
+    }
+    cartSection.innerHTML = '';
+    let html = '';
+    array.forEach(product => {
+        html += `
+        <article class="articulo">
+            <h2>${product.nombre}</h2>
+            <button class="btn-delete" onclick="deleteFromCart('${product.id}')">X</button>
+        </article>
+        `;
+    });
+    cartSection.innerHTML = html;
+}
+const deleteFromCart = id => {
+    console.log("El id del producto a borrar: ", id);
+    console.log('Carrito antes de eliminar el producto: ', carrito)
+    const buscarProductoEnCarritoYBorrar = carrito.filter(producto => producto.id !== id);
+    console.log('Carrito sin el producto que eliminaste: ', buscarProductoEnCarritoYBorrar);
+    //Se modifica el carrito original con el nuevo array;
+    carrito = buscarProductoEnCarritoYBorrar;
+    //Aqui termina la logica de eliminar del carrito
+    ////////////////////////////////////////////////////////////////
+    //Aqui empieza la logica del renderizado en el HTML
+    renderCart(carrito);
+}
+window.onload = () => {
+    
+    renderProducts(products);
+    renderCart(carrito);
+    const btnComprar = document.querySelectorAll('.btn-comprar');
+    
+    btnComprar.forEach(btn => btn.addEventListener('click', addToCart));
+}

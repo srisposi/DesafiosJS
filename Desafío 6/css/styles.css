@@ -1,0 +1,402 @@
+@charset "UTF-8";
+/* Hoja de Estilos del Sitio */
+/* Estilos Generales */
+/* CDN de los fonts utilziados en el proyecto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+/* Import de las porciones de codigo en SASS */
+/* .background{
+    background-color: blueviolet;
+}        
+ */
+/* .background--image{
+        background-image: url("https://i.blogs.es/c3e445/multi-storey-car-park-2705368_960_720/1366_2000.jpg");
+}*/
+/* RESETEO */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+.view {
+  height: auto;
+  width: auto; }
+
+/* Estilo del header */
+.header nav {
+  position: fixed;
+  z-index: 1;
+  border: 4px solid black;
+  font-size: medium;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold; }
+
+.header__nav {
+  z-index: 1;
+  background: #f10000;
+  background: radial-gradient(circle, #f10000 4%, #020024 25%, #cf0005 66%, #202124 88%);
+  border: 4px solid black;
+  font-size: medium;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: bold; }
+
+/* Estilo para el logo */
+.header__logo:hover {
+  border: 3px solid black;
+  padding: 1px;
+  margin: 2px;
+  grid-column: 1/2;
+  align-items: center;
+  transform: rotate(720deg);
+  transition: all 3s; }
+
+/* Fórmulas SASS */
+.btn--twitter {
+  background-color: #55acee; }
+
+.btn--instagram {
+  background-color: red; }
+
+.btn--facebook {
+  background-color: #3a5795; }
+
+.btn--whatsapp {
+  background-color: #C25E30; }
+
+/* ================================================================= */
+/* ESTILO PARA EL FOOTER*/
+.page-footer {
+  margin: auto;
+  padding: 2px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px; }
+  .page-footer hr {
+    width: 125px;
+    height: 2px; }
+  .page-footer .container {
+    width: auto;
+    height: auto; }
+    .page-footer .container ul li a {
+      color: white; }
+  .page-footer p a {
+    color: white; }
+
+.container--contacto {
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: stretch; }
+  .container--contacto .text--size {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    align-items: center; }
+  .container--contacto .form-control {
+    font-size: 10px;
+    width: 100%; }
+  .container--contacto section {
+    height: auto;
+    width: 100%; }
+
+.container--registrar {
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: stretch; }
+  .container--registrar .form-control .text--size {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    align-items: center; }
+    .container--registrar .form-control .text--size .small--font {
+      font-family: "Roboto", sans-serif;
+      color: white;
+      font-size: 10px; }
+  .container--registrar .row button {
+    font-family: "Roboto", sans-serif;
+    background-color: #b22222;
+    color: white;
+    font-size: 14px; }
+  .container--registrar .row label {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: white; }
+  .container--registrar .modal-header {
+    background-color: black;
+    color: white; }
+  .container--registrar .modal-body {
+    background-color: grey;
+    text-align: center; }
+    .container--registrar .modal-body p {
+      font-size: large;
+      color: white; }
+  .container--registrar .modal-footer {
+    background-color: grey; }
+    .container--registrar .modal-footer .btn {
+      background-color: #b22222;
+      color: white; }
+  .container--registrar .collapse .collapse__text--font {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    background-color: #b22222;
+    color: white; }
+
+.container--iniciarsesion {
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: stretch;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  align-items: center; }
+  .container--iniciarsesion .text--size {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    align-items: center; }
+  .container--iniciarsesion .form-group .text--size {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: "Roboto", sans-serif;
+    align-items: center; }
+  .container--iniciarsesion .row button {
+    font-family: "Roboto", sans-serif;
+    background-color: #b22222;
+    color: white;
+    font-size: 14px; }
+  .container--iniciarsesion .row label {
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: white; }
+  .container--iniciarsesion .modal-header {
+    background-color: black;
+    color: white; }
+  .container--iniciarsesion .modal-body {
+    background-color: grey;
+    text-align: center; }
+    .container--iniciarsesion .modal-body p {
+      font-size: large;
+      color: white; }
+  .container--iniciarsesion .modal-footer {
+    background-color: grey; }
+    .container--iniciarsesion .modal-footer .btn {
+      background-color: #b22222;
+      color: white; }
+
+.container--precios {
+  height: auto;
+  width: auto;
+  justify-content: center;
+  align-items: stretch;
+  font-family: "Roboto", sans-serif; }
+  .container--precios .table {
+    color: white; }
+  .container--precios thead {
+    font-size: 18px;
+    background-color: #b22222; }
+  .container--precios tbody {
+    font-size: 14px; }
+
+.precios--text {
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  border: 4px solid #b22222; }
+
+/* Definición de variables */
+/* ================================================================= */
+/* Animación */
+@keyframes animacion {
+  from { }
+  to {
+    /* probar propiedades */
+    transform: skewY(25deg); } }
+
+/* configuracion inicial */
+.animame {
+  animation: animate__rubberBand 1s linear 3s infinite alternate; }
+
+/* Estilo para elementos en todo el documento  */
+a {
+  margin: 10px;
+  /*Margen a los enlaces para separarlos*/ }
+
+h1 {
+  color: white;
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center; }
+
+h2 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-family: "Roboto", sans-serif; }
+
+h3 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  text-align: center; }
+
+/* Estilo de borde utilziado en varias secciones del sitio */
+.border {
+  border: 4px solid black; }
+
+/*Carrousel*/
+#carrusel {
+  margin: auto;
+  padding: auto;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 45vh;
+  overflow: hidden;
+  border-radius: 45px;
+  justify-content: center;
+  /* margin: 2rem;
+    padding: 0.5rem; */ }
+  #carrusel .carousel-indicators li {
+    border: 0;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%; }
+    #carrusel .carousel-indicators li .active {
+      border: 0;
+      background-color: aqua;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%; }
+  #carrusel .carousel-item {
+    height: 500px;
+    width: 200px; }
+  #carrusel .carousel-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 35px;
+    display: block;
+    text-align: center;
+    border-radius: 100%; }
+    #carrusel .carousel-arrow .carousel-arrow-prev {
+      left: 2rem; }
+    #carrusel .carousel-arrow .carousel-arrow-next {
+      right: 2rem; }
+
+.text--index p {
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  font-family: "Roboto", sans-serif; }
+
+/* ================================================================= */
+/* ESTILO PARA INDEX */
+.navbar-dark .navbar-toggler {
+  background-color: white;
+  border-color: rgba(8, 8, 8, 0.85); }
+
+.navbar-dark .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); }
+
+.subtitle {
+  margin-top: 4rem; }
+
+.container--cards .row {
+  margin: auto;
+  padding: auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+
+.container--cards .cards--parameter {
+  height: auto;
+  width: auto;
+  margin: 1.5rem;
+  padding: 0.75rem;
+  border: 2px solid #b22222; }
+
+.container--cards .card-title {
+  text-align: center;
+  color: #b22222;
+  font-size: "Roboto", sans-serif;
+  font-size: 14px; }
+
+.container--cards .card-text {
+  text-align: center;
+  color: black;
+  font-size: "Montserrat", sans-serif;
+  font-size: 10px; }
+
+/* ================================================================= */
+/* ================================================================= */
+/* ESTILO PARA HISTORIA */
+.articleHistoria {
+  height: auto;
+  width: auto;
+  margin: 2rem;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch; }
+  .articleHistoria .body__article--img {
+    padding: 0.5rem;
+    border: 2px solid #b22222; }
+  .articleHistoria p {
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    font-family: "Roboto", sans-serif; }
+
+/* ================================================================= */
+/* ================================================================= */
+/* ESTILO PARA PREGUNTAS FRECUENTES */
+.articlePreguntas {
+  height: auto;
+  margin: 3rem;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-start;
+  color: white; }
+  .articlePreguntas .body__article--question {
+    height: auto;
+    margin: 2rem;
+    border: 2px solid #b22222; }
+  .articlePreguntas h2 {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
+    align-items: flex-start; }
+  .articlePreguntas p {
+    margin: 1rem;
+    padding: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem; }
+
+/* ================================================================= */
