@@ -31,9 +31,32 @@ function crearCards(data){
     })
 }
 
+//Modificar (Versión clase)
+$('#cambiarNombre').click(() => {
+    console.log('#ValorNombre'.text);
+    $.ajax({
+        url: 'http://hp-api.herokuapp.com/api/characters/students',         
+        method: "POST",
+        data: {
+            name: '#ValorNombre'.text
+/*             species: human,
+            gender: ,
+            house: ,
+ */
+        },
+        /* console.log(personaje.name); */
+        success: function(response){
+            console.log(response);
+            /* $(personaje.name) = $('#ValorNombre').text */
+            
+        }
+    });    
+})
 
-//Modificar 
-$.ajax({
+
+
+//Modificar (Versión After)
+/* $.ajax({
     method: 'POST',
     url: 'http://hp-api.herokuapp.com/api/characters/students'
 }).done((data)=> {
@@ -43,7 +66,7 @@ $.ajax({
     });
     //modificarAPI(data);
 });
-
+ */
 /* function modificarAPI(){
     $('#cambiarNombre').click(function(){
         $(personaje.name) = $('#ValorNombre').text
